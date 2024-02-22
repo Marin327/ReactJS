@@ -1,47 +1,59 @@
-import React from 'react';
-import '../styles/Menu.css';
+import React, { useState, useEffect } from 'react';
+
 
 const Menu = () => {
-    const menuItems = [{
-                id: 1,
-                name: 'Ястие 1',
-                description: 'Пържола',
-                price: '15.99',
-                image: 'https://www.znamdaiam.bg/sites/default/files/styles/article_header/public/field/image/how_to_combine_foods.jpg?itok=f19lBvUC'
-            },
-            {
-                id: 2,
-                name: 'Ястие 2',
-                description: 'Салата Цезар',
-                price: '12.99',
-                image: 'https://bg.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BB%D0%B0%D1%82%D0%B0#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Salad_platter02.jpg'
-            },
-            {
-                id: 3,
-                name: 'Ястие 3',
-                description: 'Десерт',
-                price: '18.99',
-                image: 'https://bg.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D0%BC_%D0%B1%D1%80%D1%8E%D0%BB%D0%B5#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Cr%C3%A8me_br%C3%BBl%C3%A9e.jpg'
-            },
-        ];
+  const [menuItems, setMenuItems] = useState([]);
 
-        return ( 
-            <div className="menu">
-            <h2>Нашето Меню</h2> 
-            <ul> 
-                {menuItems.map(item => ( 
-                    <li key ={item.id}>
-                    <img scr={item.image}
-                    alt = {item.name} /> 
-                    <h3>{item.name}</h3> 
-                    <p>{item.description}</p> 
-                    <p>Цена:{item.price}</p> 
-                    </li>
-                ))
-            } 
-            </ul> 
-            </div>
-        );
-}
+  useEffect(() => {
+    // Заместете този код със заявка към вашия API или локални данни
+    const fetchData = async () => {
+      // Заместете този код със заявка или локални данни
+      const mockData = [
+        {
+          id: 1,
+          name: 'Основно ястие',
+          description: 'Пържола',
+          price: '15.99',
+          image: '/my-react-app/src/images/meat.png'
+        },
+        {
+          id: 2,
+          name: 'Салата Цезар',
+          description: 'Предястие',
+          price: '10.99',
+          image: '/my-react-app/src/images/cezar1.png'
+        },
+        {
+          id: 3,
+          name: 'Панакода с ягоди',
+          description: 'Десерт',
+          price: '8.99',
+          image: '/my-react-app/src/images/qgodi.jfif'
+        }
+      ];
+      
+      setMenuItems(mockData);
+    };
+
+    fetchData();
+  }, []); // Забележете, че зависимостта е празен масив, за да се изпълни само веднъж при зареждане
+
+  return (
+    <div className="menu">
+      <h2>Нашето Меню</h2>
+      <ul>
+        {menuItems.map(item => (
+          <li key={item.id}>
+            <img src={item.image} alt={item.name} />
+            <h3>{item.name}</h3>
+            <p>{item.description}</p>
+            <p>Цена: {item.price}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default Menu;
+

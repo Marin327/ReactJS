@@ -1,13 +1,32 @@
+// Contact.js
 import React from 'react';
-import '../styles/UserDashboard.css';
 
-const UserDashboard = ({ username, onLogout }) => {
-    return ( 
-        <div className="user-dashboard-container">
-        <h2>Добре Дошли{username}!</h2>  
-        <button onClick={onLogout}>Изход</button>  
-        </div>
-    );
-}
+const Contact = () => {
+  return (
+    <div className="contact-container">
+      <h2>Свържете се с нас: </h2>
+        Тел: +359 897 082 919
+        Имейл: marin_93@abv.bg
+      <p>
+        За допълнителна информация и въпроси, моля не се колебайте да се свържете с нас.
+      </p>
+      <form>
+        <label>
+          Име:
+          <input type="text" />
+        </label>
+        <label>
+          Имейл:
+          <input type="email" />
+        </label>
+        <label>
+          Съобщение:
+          <textarea></textarea>
+        </label>
+        <button type="submit">Изпрати</button>
+      </form>
+    </div>
+  );
+};
 
-export default UserDashboard;
+export default Contact;

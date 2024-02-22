@@ -1,0 +1,42 @@
+/* OrderForm.css */
+.order-form-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-form-container.open {
+  transform: translateX(0);
+}
+
+.order-form-container h2 {
+  text-decoration: underline;
+  color: #007BFF;
+}
+
+.order-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form-container label {
+  margin-bottom: 10px;
+}
+
+.order-form-container input {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.order-form-container button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
