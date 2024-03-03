@@ -1,0 +1,379 @@
+/* Header.css */
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Home.css */
+
+/* Home.css */
+
+.home {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 50px;
+  opacity: 0; /* Задайте начална прозрачност */
+  transition: opacity 0.5s ease-in-out; /* Добавете анимация на прозрачността */
+}
+
+.home.show {
+  opacity: 1; /* Променете прозрачността при появата */
+}
+
+.home h1,
+.home p {
+  font-family: 'Your Preferred Font', sans-serif;
+}
+
+.home h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 25px;
+  color: black;
+}
+
+/* Gallery.css */
+
+.gallery {
+  text-align: center;
+  margin: 20px;
+}
+
+.gallery h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.2) translateY(-10px);
+  filter: brightness(70%);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* App.css */
+
+/* Header styles */
+.header {
+  background-color: #333; /* Цвят на фона за хедъра */
+  color: #fff; /* Цвят на шрифта за хедъра */
+  padding: 20px; /* Подравняване на хедъра */
+
+  display: flex; /* За да направите логото и навигацията в един ред */
+  justify-content: space-between; /* Разпределянето на пространството между логото и навигацията */
+  align-items: center; /* Центриране на елементите във височина */
+
+  /* Стилизация на логото */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  /* Стилизация на навигацията */
+  .navigation {
+    display: flex;
+
+    /* Стилизация на връзките в навигацията */
+    .a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px; /* Разтояние между връзките */
+      transition: color 0.3s ease; /* Плавен преход на цвета при ховър */
+
+      &:hover {
+        color:aqua /* Цвят при ховър */
+      }
+    }
+  }
+}
+
+/* Анимация на лого */
+@keyframes logoAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Стилове за анимирано лого */
+.animated-logo {
+  animation: logoAnimation 2s infinite linear; /* Анимация на логото */
+}
+
+
+.rooms {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.rooms h2 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.rooms p {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 50px;
+}
+
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.room {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.room img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.room h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.room p {
+  font-size: 18px;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Стилове за формата за резервация */
+.reservation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-form {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.reservation-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Стилове за формата за резервация */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('images/images000.avif'); /* Пътят до изображението */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif; /* Пример за шрифт - замени го със своя предпочитан шрифт */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Contact.css */
+
+.contact-container {
+  text-align: left;
+  padding: 20px;
+  color: #333; /* Цвят на текста */
+}
+
+.contact-container h2 {
+  font-size: 24px; /* Големина на шрифта за заглавието */
+  margin-bottom: 10px;
+}
+
+.contact-container h3 {
+  font-size: 18px; /* Големина на шрифта за подзаглавията */
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 16px; /* Големина на шрифта за обичайния текст */
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  color: #fff; /* Цвят на текста в линковете */
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #007BFF; /* Фон на линковете */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Анимация при ховър */
+}
+
+.social-links a:hover {
+  background-color: #0056b3; /* Променен цвят на фона при ховър */
+}
+
+
+/* Анимация на лого */
+@keyframes logoAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Стилове за анимирано лого */
+.animated-logo {
+  animation: logoAnimation 2s infinite linear; /* Анимация на логото */
+}
+
+.reservation-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Да започне невидима преди анимацията */
+}
+
+.reservation-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Анимация за плавно появяване */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reservation-form {
+  animation: fadeIn 0.5s ease-out; /* Плътност на анимацията: ease-out */
+}
