@@ -1,0 +1,124 @@
+/* Header.css */
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Home.css */
+
+.home {
+  text-align: center;
+  padding: 50px;
+}
+
+.home h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 18px;
+  color: #555;
+}
+
+
+/* Rooms.css */
+
+.rooms {
+  padding: 50px;
+}
+
+.rooms h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.rooms p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ReservationForm.css */
+
+.reservation-form {
+  padding: 50px;
+}
+
+.reservation-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
+/* Gallery.css */
+
+.gallery {
+  padding: 50px;
+}
+
+.gallery h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
+/* Contact.css */
+
+.contact {
+  padding: 50px;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
