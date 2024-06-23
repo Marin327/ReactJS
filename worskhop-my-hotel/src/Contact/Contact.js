@@ -7,7 +7,7 @@ const Contact = () => {
     <h2> Свържете се с нас: </h2> 
     <h3> За всички запитвания, предложения или нужда от помощ. </h3> 
     <p>Имейл:<a href = "mailto:info@hotelparadise.com"> info @hotelparadise.com </a><br />
-    Телефон: +359 89 708 2919<br />
+    Телефон: 555555555555<br />
     Адрес: ул.Главна 123, село Баня 
     </p> 
     <div className = "social-links">
